@@ -7,7 +7,7 @@ C-Minor uses C++, but in the c++ console, you can program using this so called C
 
 ## What are some commands?
 __________________________
-Currently, it only has 2 commands (3 including the end one). These commands are "say" and "wait" (wait doesn't work that good). The last command is "iamdone", it simply ends the program. These are the official commands, you can probably find other commands (or make your own) which you should share in the forum. 
+Currently, it only has 2 commands (3 including the end one). These commands are "say" and "wait" (wait doesn't work that good). The last command is "done", it simply ends the program. These are the official commands, you can probably find other commands (or make your own) which you should share in the forum. Eventually I'll have a wiki for all the commands (maybe you can help with that). 
 
 ## How do I use it?
 ___________________
