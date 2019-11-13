@@ -134,6 +134,7 @@ void maker ()
   code << "#include \"code.h\"\n";
   code << "#include <iostream>\n";
   code << "#include <unistd.h>\n";
+  code << "#include <time.h>\n";
   code << "#include <string>\n";
   code << "#include <stdlib.h>\n\n";
   code << "using namespace std;\n\n";
