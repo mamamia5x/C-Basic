@@ -44,13 +44,19 @@ void coding ()
     code.open ("code.cpp",ios::app);
     code << "\ncout ";
     cin >> comnum;
+    if (timesdone == 0)
+    {
+      timesdone ++;
+      getline (cin, command);
+      code << command << "<<";
+    }
     while (comnum >= timesdone)
     {
       timesdone ++;
       getline (cin, command);
-      code << "<" << command;
+      code << command << "<<";
     }
-    code << "<< endl;" << endl;
+    code << "endl;" << endl;
     code.close();
     coding ();
   }
@@ -70,7 +76,7 @@ void coding ()
     code.open ("code.cpp",ios::app);
     code << "\n";
     cin >> numname;
-    code << "cin <<" << numname << ");\n";
+    code << "cin >>" << numname << ";\n";
     code.close ();
     coding ();
   }
