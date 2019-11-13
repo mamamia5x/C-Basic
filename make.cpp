@@ -8,18 +8,47 @@
 using namespace std;
 
 string command;
+string numname;
 int comnum;
+int linename = -1;
 
 void coding ()
 {
+  ++ linename;
+  if (linename > 0)
+  {
+    cout << linename << ". " ;
+  }
   getline (cin, command);
   if (command == "say") //cout
   {
     ofstream code;
     code.open ("code.cpp",ios::app);
     code << "\ncout << \"";
+    ++ linename;
     getline (cin, command);
     code <<"\\n"<<command << "\";";
+    code.close ();
+    coding ();
+  }
+  if (command == "math")
+  {
+    ofstream code;
+    code.open ("code.cpp",ios::app);
+    cin >> numname;
+    code << numname << " = ";
+    cin >> command;
+    code << command << ";";
+    code.close ();
+    coding ();
+  }
+  if (command == "number")
+  {
+    ofstream code;
+    code.open ("code.cpp",ios::app);
+    code << "\nlong double ";
+    cin >> numname;
+    code << numname << ";\n";
     code.close ();
     coding ();
   }
