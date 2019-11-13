@@ -27,14 +27,13 @@ void coding ()
   {
     ofstream code;
     code.open ("code.cpp",ios::app);
-    code << "\nusleep (" ;
+    code << "\nsleep (" ;
     cin >> comnum;
-    comnum = comnum * 1000000;
     code << comnum << ");";
     code.close();
     coding (); 
   }
-  if (command == "iamdone")
+  if (command == "done")
   {
     ofstream code;
     code.open ("code.cpp",ios::app);
