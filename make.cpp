@@ -10,14 +10,19 @@ using namespace std;
 string command;
 string numname;
 int comnum;
-int linename = -1;
+int linename = 0;
 
 void coding ()
 {
   ++ linename;
-  if (linename > 0)
+  if (linename == 1)
   {
-    cout << linename << ". " ;
+    system ("clear");
+    cout << linename << ". ";
+  }
+  if (linename > 1)
+  {
+    cout << linename << ". ";
   }
   getline (cin, command);
   if (command == "say") //cout
@@ -25,13 +30,12 @@ void coding ()
     ofstream code;
     code.open ("code.cpp",ios::app);
     code << "\ncout << \"";
-    ++ linename;
     getline (cin, command);
     code <<"\\n"<<command << "\";";
     code.close ();
     coding ();
   }
-  if (command == "math")
+  else if (command == "math")
   {
     ofstream code;
     code.open ("code.cpp",ios::app);
@@ -42,7 +46,7 @@ void coding ()
     code.close ();
     coding ();
   }
-  if (command == "number")
+  else if (command == "number")
   {
     ofstream code;
     code.open ("code.cpp",ios::app);
@@ -52,7 +56,7 @@ void coding ()
     code.close ();
     coding ();
   }
-  if (command == "wait")
+  else if (command == "wait")
   {
     ofstream code;
     code.open ("code.cpp",ios::app);
@@ -62,7 +66,7 @@ void coding ()
     code.close();
     coding (); 
   }
-  if (command == "done")
+  else if (command == "done")
   {
     ofstream code;
     code.open ("code.cpp",ios::app);
@@ -72,7 +76,11 @@ void coding ()
     cout << "You've finished your code. \nIn order to play it,\nyou'll need to reset the program and say you want to run it." << endl;
     exit (-1);
   }
-  coding ();
+  else
+  {
+    -- linename ;
+    coding ();
+  }
 }
 void maker ()
 {
