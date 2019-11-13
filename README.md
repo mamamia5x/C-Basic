@@ -7,7 +7,7 @@ C-Minor uses C++, but in the c++ console, you can program using this so called C
 
 ## What are some commands?
 __________________________
-Currently, it only has 2 commands (3 including the end one). These commands are "say" and "wait" (wait doesn't work that good). The last command is "iamdone", it simply ends the program.
+Currently, it only has 2 commands (3 including the end one). These commands are "say" and "wait" (wait doesn't work that good). The last command is "iamdone", it simply ends the program. These are the official commands, you can probably find other commands (or make your own) which you should share in the forum. 
 
 ## How do I use it?
 ___________________
@@ -19,4 +19,4 @@ C-Minor uses fstream. Fstream allows the code itself to change, without us doing
 
 ## Can I help?
 ______________
-If you'd like to help, make your own copy of the file (you should use repl.it and just use the url). Then, this'll be where you can create code in C-Minor, or you can change it. Feel free to add your own codes, and share them on our forum [here](http://cminor.forumotion.com/).
+If you'd like to help, make your own copy of the file (you should use repl.it and just use the url). Then, this'll be where you can create code in C-Minor, or you can change it. Feel free to add your own codes, and share them on our forum [here](http://cminor.forumotion.com/). Who knows, maybe your code can be in C-Minor.
