@@ -15,13 +15,14 @@ int linename = 0;
 void coding ()
 {
   ++ linename;
-  if (linename == 1)
-  {
-    system ("clear");
-    cout << linename << ". ";
-  }
+  ++ linename;
   if (linename > 1)
   {
+    -- linename; 
+    if (linename == 1)
+    {
+      system ("clear");
+    }
     cout << linename << ". ";
   }
   getline (cin, command);
