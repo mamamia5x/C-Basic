@@ -52,7 +52,7 @@ void coding ()
     code.open ("code.cpp",ios::app);
     code << "\n";
     cin >> numname;
-    code << "getline (cin, " << numname << ");\n";
+    code << "cin <<" << numname << ");\n";
     code.close ();
     coding ();
   }
