@@ -10,6 +10,7 @@ using namespace std;
 string command;
 string numname;
 int comnum;
+int timesdone;
 int linename = 0;
 
 void coding ()
@@ -34,6 +35,23 @@ void coding ()
     getline (cin, command);
     code <<"\\n"<<command << "\";";
     code.close ();
+    coding ();
+  }
+  else if (command == "special")
+  {
+    timesdone = 0;
+    ofstream code;
+    code.open ("code.cpp",ios::app);
+    code << "\ncout ";
+    cin >> comnum;
+    while (comnum >= timesdone)
+    {
+      timesdone ++;
+      getline (cin, command);
+      code << "<" << command;
+    }
+    code << "<< endl;" << endl;
+    code.close();
     coding ();
   }
   else if (command == "id")
