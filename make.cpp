@@ -36,12 +36,32 @@ void coding ()
     code.close ();
     coding ();
   }
+  else if (command == "id")
+  {
+    ofstream code;
+    code.open ("code.cpp",ios::app);
+    code << "\nstring ";
+    cin >> numname;
+    code << numname << ";\n";
+    code.close ();
+    coding ();
+  }
+  else if (command == "listen")
+  {
+    ofstream code;
+    code.open ("code.cpp",ios::app);
+    code << "\n";
+    cin >> numname;
+    code << "getline (cin, " << numname << ");\n";
+    code.close ();
+    coding ();
+  }
   else if (command == "math")
   {
     ofstream code;
     code.open ("code.cpp",ios::app);
     cin >> numname;
-    code << numname << " = ";
+    code << endl << numname << " = ";
     cin >> command;
     code << command << ";";
     code.close ();
@@ -90,6 +110,7 @@ void maker ()
   code << "#include \"code.h\"\n";
   code << "#include <iostream>\n";
   code << "#include <unistd.h>\n";
+  code << "#include <string>\n";
   code << "#include <stdlib.h>\n\n";
   code << "using namespace std;\n\n";
   code << "void usercode()\n{\nsystem (\"clear\");";
