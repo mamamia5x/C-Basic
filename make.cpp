@@ -111,6 +111,26 @@ void coding ()
     code.close();
     coding (); 
   }
+  else if (command == "ifequal")
+  {
+    ofstream code;
+    code.open ("code.cpp",ios::app);
+    code << "\nif (" ;
+    cin >> command;
+    code << command << "==";
+    cin >> command;
+    code << command << "){\n";
+    code.close ();
+    coding ();
+  }
+  else if (command == "ifdone")
+  {
+    ofstream code;
+    code.open ("code.cpp",ios::app);
+    code << "\n}";
+    code.close ();
+    coding ();
+  }
   else if (command == "done")
   {
     ofstream code;
