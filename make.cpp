@@ -60,6 +60,14 @@ void coding ()
     code.close();
     coding ();
   }
+  else if (command == "clear")
+  {
+    ofstream code;
+    code.open ("code.cpp",ios::app);
+    code << "\nsystem (\"clear\");";
+    code.close ();
+    coding ();
+  }
   else if (command == "id")
   {
     ofstream code;
